@@ -21,6 +21,8 @@ import com.example.anonatsu.ui.theme.AppTheme
 import com.example.anonatsu.viewmodel.ChatViewModel
 import com.example.anonatsu.viewmodel.ChatViewModelFactory
 
+import androidx.compose.material3.ExperimentalMaterial3Api
+
 class MainActivity : ComponentActivity() {
 
     // Application を App 型にキャスト（App.kt 必須）
@@ -43,6 +45,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    @OptIn(ExperimentalMaterial3Api::class)
     @Composable
     private fun ChatRoute(
         vm: ChatViewModel = viewModel(
@@ -80,7 +83,7 @@ class MainActivity : ComponentActivity() {
                         .fillMaxWidth(),
                     contentPadding = PaddingValues(8.dp)
                 ) {
-                    items(messages, key = { it.id }) { msg ->
+                    items(messages) { msg ->
                         ChatBubble(msg)
                     }
                 }
