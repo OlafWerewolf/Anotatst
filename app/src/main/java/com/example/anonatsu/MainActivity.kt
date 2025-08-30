@@ -58,7 +58,7 @@ class MainActivity : ComponentActivity() {
         Scaffold(
             topBar = {
                 CenterAlignedTopAppBar(
-                    title = { Text("LINE風（オフライン）") },
+                    title = { Text("星川夏月") },
                     colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                         containerColor = MaterialTheme.colorScheme.primary,
                         titleContentColor = MaterialTheme.colorScheme.onPrimary,
